@@ -9,6 +9,7 @@ return function (App $app) {
         "attribute" => "decoded_token_data",
         "secret" => "supersecretkeyyoushouldnotcommittogithub",
         "algorithm" => ["HS256"],
+        "secure" => false,
         "error" => function ($response, $arguments) {
             $data["error"] = "true";
             $data["data"] = null;
