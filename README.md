@@ -1,43 +1,43 @@
 # Uso de la api
 
-Todas las rutas tienen una respuesta estandar
-
-{
-	"error" : true/false, //verdadero o falso dependiendo de si se ha producido un error o no
-	"data" : {}, //objeto que varia segun la ruta, vease abajo resultado de cada ruta. En caso de erro estara nulo
-	"message" : "" //mensaje con lo que sea que ha ocurrido
+Todas las rutas tienen una respuesta estandar  
+  
+{  
+	"error" : true/false, //verdadero o falso dependiendo de si se ha producido un error o no  
+	"data" : {}, //objeto que varia segun la ruta, vease abajo resultado de cada ruta. En caso de erro estara nulo  
+	"message" : "" //mensaje con lo que sea que ha ocurrido  
 }
-
-El token se debera mandar en el header "Authorization" con el contenido "Bearer stringdeltoken"
-
-Rutas:
-
-/login
-metodo: POST
-datos:
-
-{
-	"user" : "usuario",
-	"pass" : "clave"
-}
-
-respuesta si se usa admin/1234, cualquier otra combinacion devolvera error de login
-
-token : "stringdeltoken"
-
-/api/user
-metodo: GET
-requiere login
-datos: ninguno
-respuesta:
-	user : "nombreusuario"
-
-/api/data
-metodo: POST
-requiere login
-datos: lo que quieras mandar
-respuesta: lo que sea que hayas mandado
-
+  
+El token se debera mandar en el header "Authorization" con el contenido "Bearer stringdeltoken"  
+  
+Rutas:  
+  
+/login  
+metodo: POST  
+datos:  
+  
+{  
+	"user" : "usuario",  
+	"pass" : "clave"  
+}  
+  
+respuesta si se usa admin/1234, cualquier otra combinacion devolvera error de login  
+  
+token : "stringdeltoken"  
+  
+/api/user  
+metodo: GET  
+requiere login  
+datos: ninguno  
+respuesta:  
+	user : "nombreusuario"  
+  
+/api/data  
+metodo: POST  
+requiere login  
+datos: lo que quieras mandar  
+respuesta: lo que sea que hayas mandado  
+  
 ## Install the Application
 
 Run this command from the directory in which you want to install your new Slim Framework application.
